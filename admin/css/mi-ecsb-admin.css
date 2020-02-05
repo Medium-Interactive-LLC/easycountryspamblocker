@@ -1,0 +1,329 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.ecsb-left,
+.ecsb-right {
+    width: 50%;
+    display: inline-block;
+}
+
+.ecsb-left {
+    float: left;
+}
+
+.ecsb-right {
+    float: right;
+}
+
+.ecsb-admin-page {
+    margin-right: 20px;
+}
+
+.ecsb-admin-page .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.ecsb-admin-page .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ecsb-admin-page .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+.ecsb-admin-page .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+.ecsb-admin-page input:checked+.slider {
+    background-color: #2677d5;
+}
+
+.ecsb-admin-page input:focus+.slider {
+    box-shadow: 0 0 1px #2677d5;
+}
+
+.ecsb-admin-page input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.ecsb-admin-page .slider.round {
+    border-radius: 20px;
+}
+
+.ecsb-admin-page .slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+.ecsb-admin-page .section {
+    margin: 10px 0;
+    width: 520px;
+    background-color: #212121;
+    color: white;
+}
+
+.ecsb-admin-page .section .content {
+    padding: 10px;
+}
+
+.ecsb-admin-page .ecsb-field {
+    margin: 5px 0;
+}
+
+.ecsb-admin-page .ecsb-field-label {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ecsb-admin-page .ecsb-field.marginless-bottom {
+    margin-bottom: 0;
+}
+
+.ecsb-admin-page .ecsb-field .ecsb-explanation {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container {
+    margin-top: 0;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item {
+    height: 35px;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-text {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-text {
+    position: relative;
+    z-index: 5;
+    margin-left: -4px;
+    padding: 5px;
+    width: 415px;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    -webkit-transition: background-color 250ms, color 250ms;
+    -moz-transition: background-color 250ms, color 250ms;
+    -o-transition: background-color 250ms, color 250ms;
+    transition: background-color 250ms, color 250ms;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-text:hover, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-text:active, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-text:focus {
+    background-color: #0d3e70;
+    color: white;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown {
+    position: relative;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 300px;
+    z-index: 0;
+    opacity: 0;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.07);
+    -o-box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.07);
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.07);
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    animation: optionsFadeOut 250ms ease-in;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options.initial {
+    visibility: hidden;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options.show {
+    top: 25px;
+    z-index: 10;
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+    animation: optionsFadeIn 500ms ease-out;
+}
+
+@keyframes optionsFadeIn {
+    0% {
+        top: -40px;
+        z-index: 0;
+        opacity: 0;
+        -webkit-transform: scaleY(0);
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    65% {
+        opacity: 1;
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    95% {
+        z-index: 3;
+    }
+    100% {
+        top: 25px;
+        z-index: 10;
+    }
+}
+
+@keyframes optionsFadeOut {
+    0% {
+        top: 25px;
+        z-index: 10;
+        opacity: 1;
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    5% {
+        z-index: 3;
+    }
+    95% {
+        opacity: 0;
+        -webkit-transform: scaleY(0);
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -o-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+    100% {
+        top: -40px;
+        z-index: 0;
+    }
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options .url-protocol-option {
+    margin: 0;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    -webkit-transition: background-color 250ms, color 250ms;
+    -moz-transition: background-color 250ms, color 250ms;
+    -o-transition: background-color 250ms, color 250ms;
+    transition: background-color 250ms, color 250ms;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options .url-protocol-option:hover, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options .url-protocol-option:active, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-options .url-protocol-option:focus {
+    background-color: #2677d5;
+    color: white;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-button {
+    position: relative;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 85px;
+    background-color: white;
+    font-weight: 500;
+    color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background-color 250ms, color 250ms;
+    -moz-transition: background-color 250ms, color 250ms;
+    -o-transition: background-color 250ms, color 250ms;
+    transition: background-color 250ms, color 250ms;
+}
+
+.ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-button:hover, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-button:active, .ecsb-admin-page .ecsb-field.url-select-container .url-select-item .url-protocol-dropdown .url-protocol-button:focus {
+    background-color: #2677d5;
+    color: white;
+}
+
+.ecsb-admin-page .ecsb-notice {
+    margin: 10px 0;
+    opacity: 1;
+    animation: noticeFadeIn 500ms ease-in;
+}
+
+.ecsb-admin-page .ecsb-notice.hide {
+    opacity: 0;
+    animation: noticeFadeOut 500ms ease-out;
+}
+
+@keyframes noticeFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes noticeFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
